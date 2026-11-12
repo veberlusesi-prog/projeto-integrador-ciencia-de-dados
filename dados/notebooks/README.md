@@ -1,1 +1,0 @@
-Códigos Python e análises
