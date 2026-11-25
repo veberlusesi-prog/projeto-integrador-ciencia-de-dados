@@ -1,0 +1,40 @@
+### Atividade 1.5 — Carregamento e inspeção das seis tabelas restantes
+
+**Atividades realizadas**
+
+Foram carregados os seis arquivos JSONL restantes utilizando `pd.read_json()` com o argumento `lines=True`. Cada arquivo foi armazenado em um DataFrame separado.
+
+Foram analisadas as primeiras linhas, dimensões, tipos de dados e valores ausentes. Também foi realizada a comparação entre a quantidade de registros encontrada e a quantidade esperada conforme o README.
+
+**Resultados obtidos**
+
+| Tabela | Linhas | Colunas | Valores ausentes |
+|---|---:|---:|---:|
+| room_types | 42 | 10 | 0 |
+| daily_market | 10.192 | 56 | 0 |
+| weekly_performance | 1.456 | 41 | 836 |
+| rate_decisions | 1.442 | 24 | 0 |
+| reviews | 12.077 | 26 | 3.769 |
+| review_scenarios | 11 | 7 | 0 |
+
+Todas as seis tabelas apresentaram a quantidade de linhas esperada pelo README.
+
+**Análise dos valores ausentes**
+
+Na tabela `weekly_performance`, foram encontrados 836 valores ausentes, distribuídos em cinco colunas:
+
+- `flow_through`: 728;
+- `mean_rating`: 27;
+- `positive_share`: 27;
+- `sentiment_index`: 27;
+- `response_rate`: 27.
+
+A coluna `flow_through` apresentou exatamente 728 ausentes, quantidade correspondente a 14 hotéis multiplicados pelas primeiras 52 semanas.
+
+Na tabela `reviews`, foram encontrados 3.769 valores ausentes, todos na coluna `response_hours`.
+
+As demais tabelas não apresentaram valores ausentes identificados pelo método `isna()`.
+
+**Conclusão**
+
+O carregamento e a validação das seis tabelas foram realizados com sucesso. Todas apresentaram as dimensões esperadas. Os valores ausentes foram identificados e registrados para análise posterior, sem realizar exclusões ou preenchimentos nesta etapa.
