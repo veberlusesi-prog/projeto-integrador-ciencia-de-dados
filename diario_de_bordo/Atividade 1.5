@@ -1,0 +1,30 @@
+### Atividade 1.5 — Carregamento e validação das tabelas
+
+**Objetivo:** carregar as seis tabelas restantes dos arquivos JSONL e verificar suas dimensões, tipos de dados e valores ausentes.
+
+**Resultados obtidos:**
+
+| Tabela | Linhas | Colunas | Valores ausentes |
+|---|---:|---:|---:|
+| room_types | 42 | 10 | 0 |
+| daily_market | 10.192 | 56 | 0 |
+| weekly_performance | 1.456 | 41 | 836 |
+| rate_decisions | 1.442 | 24 | 0 |
+| reviews | 12.077 | 26 | 3.769 |
+| review_scenarios | 11 | 7 | 0 |
+
+**Testes realizados:**
+- Carregamento das seis tabelas com Pandas.
+- Conferência das dimensões em relação ao README.
+- Verificação dos tipos de dados.
+- Identificação e contagem de valores ausentes.
+
+**Interpretação:**
+
+Todas as tabelas apresentaram a quantidade de linhas esperada, sem divergências em relação ao README.
+
+Foram identificados valores ausentes nas tabelas `weekly_performance` e `reviews`. Esses valores deverão ser investigados nas próximas etapas, antes de qualquer tratamento.
+
+**Conclusão:**
+
+O carregamento e a validação inicial das seis tabelas foram realizados com sucesso.
