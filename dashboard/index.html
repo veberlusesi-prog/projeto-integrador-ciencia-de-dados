@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Port Alder | Dashboard Hoteleiro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div>
+            <h1>PORT ALDER</h1>
+            <p>Painel de desempenho hoteleiro</p>
+        </div>
+
+        <span class="periodo">2027 — 2028</span>
+    </header>
+
+    <main class="container">
+
+        <!-- FILTROS -->
+        <section class="filtros">
+            <div>
+                <label for="filtroCategoria">Categoria do hotel</label>
+                <select id="filtroCategoria">
+                    <option value="todas">Todas as categorias</option>
+                    <option value="boutique">Boutique</option>
+                    <option value="economy">Economy</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="midscale">Midscale</option>
+                    <option value="upscale">Upscale</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="filtroAno">Ano</label>
+                <select id="filtroAno">
+                    <option value="todos">Todos os anos</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- INDICADORES -->
+        <section class="indicadores">
+
+            <article class="card">
+                <h3>Ocupação média</h3>
+                <p id="kpiOcupacao">--</p>
+            </article>
+
+            <article class="card">
+                <h3>ADR médio</h3>
+                <p id="kpiAdr">--</p>
+            </article>
+
+            <article class="card">
+                <h3>RevPAR médio</h3>
+                <p id="kpiRevpar">--</p>
+            </article>
+
+            <article class="card">
+                <h3>Receita total</h3>
+                <p id="kpiReceita">--</p>
+            </article>
+
+        </section>
+
+        <!-- GRÁFICOS -->
+        <section class="graficos">
+
+            <article class="painel">
+                <h2>Desempenho por categoria</h2>
+                <div id="graficoCategoria"></div>
+            </article>
+
+            <article class="painel">
+                <h2>Evolução mensal</h2>
+                <div id="graficoMensal"></div>
+            </article>
+
+            <article class="painel">
+                <h2>Avaliações dos hóspedes</h2>
+                <div id="graficoAvaliacoes"></div>
+            </article>
+
+        </section>
+
+        <!-- TABELA -->
+        <section class="painel tabela-container">
+
+            <h2>Desempenho dos hotéis</h2>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hotel</th>
+                            <th>Categoria</th>
+                            <th>Ocupação</th>
+                            <th>ADR</th>
+                            <th>RevPAR</th>
+                            <th>Receita</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaHoteis">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="mensagemVazia" class="mensagem-vazia">
+                Nenhum dado encontrado para os filtros selecionados.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto Integrador de Ciência de Dados</p>
+        <p>Fonte: conjunto de dados sintético de Port Alder (2027–2028).</p>
+    </footer>
+
+    <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
